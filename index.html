@@ -217,8 +217,8 @@
     padding-bottom:8px;
   }
   body.mode-speed .category-grid{
-    grid-template-columns:repeat(2, 1fr);
-    max-width:480px;margin:0 auto;
+    grid-template-columns:repeat(3, 1fr);
+    max-width:none;margin:0;
   }
   .cat-card{
     background:var(--card);
@@ -1042,8 +1042,8 @@
     .home-card .label-small{font-size:11px;}
     .category-grid{grid-template-columns:repeat(6, 1fr);}
     body.mode-speed .category-grid{
-      grid-template-columns:repeat(4, 1fr);
-      max-width:760px;margin:0 auto;
+      grid-template-columns:repeat(6, 1fr);
+      max-width:none;margin:0;
     }
     .cat-card{aspect-ratio:1.1;padding:8px 6px;gap:4px;}
     .cat-card .cat-emoji{font-size:22px;}
@@ -1555,6 +1555,10 @@ const SPEED_CATEGORIES = [
    words:['당근 케이크','아이스 카페라떼','민트초코','팥죽','사과주스','치즈버거','연어초밥','파인애플피자','레몬사탕','포카리스웨트','부대찌개','인절미','잔치국수','푸팟퐁커리','탕짜면']},
   {id:'brand',  name:'브랜드',     emoji:'🛍', stars:3,
    words:['교촌','나이키','배스킨라빈스','CGV','유니클로','에르메스','구글','벤츠','유튜브','올리브영','카카오톡','다이소','넷플릭스','맥도날드','테슬라']},
+  {id:'place',  name:'장소/위치',  emoji:'📍', stars:3,
+   words:['공항','편의점','주유소','도서관','놀이공원','미용실','한강공원','노래방','응급실','목욕탕','엘리베이터','헬스장','제니스 아이스링크','동물원','은행']},
+  {id:'vehicle',name:'교통/이동수단', emoji:'🚌', stars:3,
+   words:['버스','택시','자전거','인력거','기차','오토바이','킥보드','헬리콥터','유람선','소방차','케이블카','열기구','캠핑카','셔틀버스','우주선']},
   {id:'movie',  name:'영화/드라마', emoji:'🎬', stars:4,
    words:['범죄도시','오징어 게임','기생충','아바타','해리포터','겨울왕국','스파이더맨','타이타닉','대장금','도깨비','왕과 사는 남자','라이언킹','어벤져스: 엔드게임','악마는 프라다를 입는다','파묘']},
 ];
