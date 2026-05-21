@@ -478,28 +478,6 @@
     font-size:10px;font-weight:700;color:var(--notice);
     background:#FFFBEB;padding:2px 8px;border-radius:8px;
   }
-  .foul-btn{
-    position:absolute;
-    top:10px;right:12px;
-    background:#FFFBEB;
-    border:1.5px solid var(--notice);
-    color:#333;
-    font-weight:900;
-    font-size:11px;
-    padding:5px 11px 5px 9px;
-    border-radius:999px;
-    display:flex;align-items:center;gap:4px;
-    transition:transform .1s, background .1s;
-    z-index:3;
-    line-height:1;
-  }
-  .foul-btn:active{
-    transform:scale(0.9);
-    background:var(--notice);
-  }
-  .foul-btn .foul-icon{font-size:13px;}
-  /* word-card 보류 태그가 있을 때는 반칙 버튼을 살짝 왼쪽으로 (겹침 방지) */
-  .word-card.passed-tag .foul-btn{right:60px;}
 
   .action-row{
     display:flex;gap:10px;
@@ -507,7 +485,7 @@
     flex-shrink:0;
   }
   .action-btn{
-    flex:1;
+    flex:4;
     padding:14px;
     border-radius:14px;
     font-size:18px;font-weight:900;
@@ -523,6 +501,21 @@
     background:#fff;color:var(--negative);
     border:2px solid var(--negative);
   }
+  .action-btn.foul{
+    flex:2;
+    background:#FFFBEB;
+    color:#7a5d00;
+    border:2px solid var(--notice);
+    font-size:14px;
+    letter-spacing:0;
+    display:flex;align-items:center;justify-content:center;gap:4px;
+  }
+  .action-btn.foul:active{
+    background:var(--notice);
+    color:#222;
+  }
+  .action-btn.foul .foul-icon{font-size:16px;line-height:1;}
+  .action-btn.foul .foul-label{font-weight:900;}
 
   /* 정답 플래시 */
   .flash{
@@ -1072,6 +1065,8 @@
     .word-card .word-text{font-size:36px;}
     .word-card .word-idx{font-size:11px;}
     .action-btn{padding:10px;font-size:15px;}
+    .action-btn.foul{font-size:12px;}
+    .action-btn.foul .foul-icon{font-size:14px;}
     .action-row{margin-top:6px;}
     /* 종료 화면: 가로 2단 레이아웃 */
     #screen-end .screen-inner{padding:8px 12px;}
@@ -1233,10 +1228,6 @@
         <div class="word-stage">
           <button class="arrow left" id="arrowLeft">◀</button>
           <div class="word-card" id="wordCard">
-            <button class="foul-btn" id="btnFoul" aria-label="반칙">
-              <span class="foul-icon">⚠</span>
-              <span class="foul-label">반칙</span>
-            </button>
             <div class="word-idx" id="wordIdx">1 / 15</div>
             <div class="word-text" id="wordText">등산</div>
           </div>
@@ -1244,6 +1235,10 @@
         </div>
         <div class="action-row">
           <button class="action-btn pass" id="btnPass">패스!</button>
+          <button class="action-btn foul" id="btnFoul">
+            <span class="foul-icon">⚠</span>
+            <span class="foul-label">반칙</span>
+          </button>
           <button class="action-btn correct" id="btnCorrect">정답!</button>
         </div>
         <div class="flash" id="flash"></div>
