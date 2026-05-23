@@ -1094,6 +1094,76 @@
   }
 
   /* === 데스크탑/노트북 === */
+ /* === 아이패드 가로 전용 (1024~1366px) === */
+  @media (min-width: 1024px) and (max-width: 1366px) and (orientation: landscape){
+    .topbar{height:60px;}
+    .topbar .title{font-size:24px;}
+    .topbar .back{width:48px;height:48px;font-size:26px;left:16px;}
+    .tb-icon{width:48px;height:48px;font-size:24px;}
+    .topbar .timer{min-width:100px;height:48px;font-size:28px;border-radius:24px;padding:0 18px;}
+
+    /* 메인: 4컬럼 + 카드 확대 */
+    #screen-home .screen-inner{padding:20px;}
+    .home-hero{padding:22px 30px;margin-bottom:18px;}
+    .home-hero .hh-left h1{font-size:30px;}
+    .home-hero .hh-left p{font-size:15px;}
+    .home-hero .hh-mini{font-size:15px;padding:8px 16px;}
+
+    .games-grid{grid-template-columns:repeat(4, 1fr);gap:16px;}
+    .game-card{padding:20px;min-height:200px;border-radius:18px;}
+    .game-card .gc-num{font-size:13px;}
+    .game-card .gc-emoji{font-size:54px;margin-bottom:8px;}
+    .game-card .gc-name{font-size:22px;min-height:54px;margin-bottom:6px;}
+    .game-card .gc-desc{font-size:14px;line-height:1.4;}
+    .game-card .gc-status{font-size:13px;}
+    .game-card .gc-badge{font-size:12px;padding:4px 10px;}
+    .game-card .gc-checkmark{font-size:20px;}
+    .game-card .gc-corner{width:54px;height:54px;}
+
+    /* 카테고리 선택: 4컬럼 + 이모지·텍스트 확대 */
+    #screen-cat .screen-inner{padding:24px 32px;}
+    .cat-header h2{font-size:32px;}
+    .cat-header p{font-size:16px;}
+    .cat-grid{grid-template-columns:repeat(4, 1fr);gap:18px;}
+    .cat-card{padding:28px 14px;aspect-ratio:1.1;gap:12px;border-radius:20px;}
+    .cat-card .cat-emoji{font-size:64px;}
+    .cat-card .cat-name{font-size:26px;}
+    .cat-card .cat-stars{font-size:16px;letter-spacing:2px;}
+    .cat-card .cat-count{font-size:13px;}
+
+    /* 제시어 게임 진행: 단어 초대형 */
+    .game-wrap{padding:20px 36px 28px;}
+    .game-meta .cat-pill{font-size:20px;padding:8px 22px;}
+    .game-meta .progress{font-size:17px;}
+    .game-meta .score{font-size:22px;}
+    .game-meta .score .score-num{font-size:32px;}
+    .word-card{padding:50px 60px;border-radius:28px;min-width:75%;}
+    .word-card .word-idx{font-size:18px;margin-bottom:14px;}
+    .word-card .word-text{font-size:clamp(80px, 12vw, 160px);}
+    .action-row{gap:16px;margin-top:22px;}
+    .action-btn{padding:22px;border-radius:18px;font-size:28px;}
+    .action-btn.foul{font-size:20px;}
+
+    /* 팀 선택 / 라운드 시작 */
+    .tp-header h2{font-size:26px;}
+    .tp-header .tp-cat-pill{font-size:18px;padding:8px 20px;}
+    .tp-team{padding:22px 26px;border-radius:20px;}
+    .tp-team .tt-name{font-size:24px;}
+    .tp-team .tt-status{font-size:14px;}
+    .tp-team .tt-score{font-size:16px;padding:5px 14px;}
+    .tp-actions button{padding:16px;font-size:17px;}
+
+    .round-start{padding:42px 50px;border-radius:28px;}
+    .round-start .rs-team{font-size:42px;}
+    .round-start .rs-cat{font-size:18px;}
+    .round-start .rs-rules{font-size:15px;padding:14px 18px;}
+    .round-start .rs-btn{font-size:30px;padding:18px 64px;}
+
+    .countdown-num{font-size:200px;}
+    .countdown-num.go{font-size:140px;}
+  }
+
+  /* === 데스크탑/노트북 === */
   @media (min-width: 1024px) and (min-height: 700px){
     .topbar{height:64px;}
     .topbar .title{font-size:22px;}
