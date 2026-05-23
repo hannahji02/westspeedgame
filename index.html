@@ -1163,8 +1163,9 @@
     .countdown-num.go{font-size:140px;}
   }
 
-  /* === 데스크탑/노트북 === */
-  @media (min-width: 1024px) and (min-height: 700px){
+  /* === 데스크탑/노트북 (1367px 이상 또는 세로모드) === */
+  @media (min-width: 1367px) and (min-height: 700px),
+         (min-width: 1024px) and (min-height: 700px) and (orientation: portrait){
     .topbar{height:64px;}
     .topbar .title{font-size:22px;}
     .topbar .back{width:44px;height:44px;font-size:24px;left:18px;}
