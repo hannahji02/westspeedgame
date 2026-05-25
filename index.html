@@ -1362,7 +1362,7 @@
       <div class="home-hero">
         <div class="hh-left">
           <h1>🏒 WEST HOCKEY MT 게임</h1>
-          <p>10개 미니게임 · 종합 순위로 우승팀 결정</p>
+          <p>6개 미니게임 · 종합 순위로 우승팀 결정</p>
         </div>
         <div class="hh-rank" id="homeMiniRank"></div>
       </div>
@@ -1639,16 +1639,16 @@ const RANK_POINTS = [10, 6, 3, 1];
 
 const GAMES = [
   {
-    id:'g1', num:1, name:'아이엠그라운드', sub:'하키 테마', emoji:'🏒',
+    id:'g1', num:1, name:'아이엠그라운드', sub:'축구 테마', emoji:'⚽️',
     color:'#00B4D8', colorLight:'#E0F7FB',
     desc:'주제에 맞춰 단어 6개 빨리 말하기',
     body:{
       rules:[
         '진행자가 외친 <b>주제</b>에 맞춰 단어 6개를 빠르게 외칩니다.',
         '제한시간 <b>5초</b>. 시간 안에 6개를 못 채우면 탈락!',
-        '주제는 하키 테마 우선, 일반 주제도 포함.',
+        '주제는 축구 테마 우선, 일반 주제도 포함.',
       ],
-      examples:['하키 장비','아이스링크 시설','국가대표 선수','라면 종류','나라 이름','스포츠 브랜드','아이돌 6명'],
+      examples:['축구 선수','스포츠 브랜드','페널티 멤버'],
       tip:'아이엠그라운드 박자에 맞춰 한 명씩 돌아가며 외칩니다.',
     }
   },
@@ -1669,33 +1669,7 @@ const GAMES = [
     }
   },
   {
-    id:'g3', num:3, name:'탁구공 릴레이', sub:'2인 1조', emoji:'🏓',
-    color:'#FF6B35', colorLight:'#FFF0E8',
-    desc:'2인 1조 탁구공 옮기기 릴레이',
-    body:{
-      rules:[
-        '팀당 <b>2명 1조</b>로 진행, 라켓 위에 탁구공을 올려 결승선까지 운반.',
-        '떨어뜨리면 그 자리에서 다시 시작.',
-        '결승선 도착 시간 또는 코스 완주 여부로 순위 결정.',
-      ],
-      tip:'먼저 도착한 팀이 1위. 동시에 도착 시 동순위 처리.',
-    }
-  },
-  {
-    id:'g4', num:4, name:'공 오래 불기', sub:'공 공중 유지', emoji:'🎈',
-    color:'#4ECDC4', colorLight:'#E8F9F7',
-    desc:'공을 입김으로 공중에 가장 오래 유지',
-    body:{
-      rules:[
-        '가벼운 공을 <b>입김만으로</b> 공중에 띄워 유지.',
-        '바닥에 닿으면 종료, 유지 시간이 가장 긴 팀이 승리.',
-        '손/몸 접촉 금지.',
-      ],
-      tip:'여러 명이 번갈아 부는 것 허용 여부는 진행자가 정합니다.',
-    }
-  },
-  {
-    id:'g5', num:5, name:'병뚜껑 멀리 보내기', sub:'손가락 튕기기', emoji:'🍾',
+    id:'g5', num:3, name:'병뚜껑 멀리 보내기', sub:'손가락 튕기기', emoji:'🍾',
     color:'#FFB627', colorLight:'#FFF8E5',
     desc:'손가락으로 병뚜껑 튕겨 멀리',
     body:{
@@ -1708,21 +1682,7 @@ const GAMES = [
     }
   },
   {
-    id:'g6', num:6, name:'젤리손 물건 잡기', sub:'고무장갑 핸디캡', emoji:'🧤',
-    color:'#9D4EDD', colorLight:'#F3E8FF',
-    desc:'고무장갑 끼고 정해진 물건 잡기',
-    body:{
-      rules:[
-        '두꺼운 <b>고무장갑(젤리손)</b>을 양손에 끼고 시작.',
-        '책상 위 여러 물건 중 진행자가 외친 물건을 잡아 옮깁니다.',
-        '정해진 시간 안에 <b>가장 많이</b> 옮긴 팀이 승리.',
-      ],
-      examples:['과자','일회용 컵','작은 인형','동전','연필','휴지'],
-      tip:'제한시간은 진행자가 즉석에서 정하세요 (보통 30~60초).',
-    }
-  },
-  {
-    id:'g7', num:7, name:'노래 맞추기', sub:'인트로 퀴즈', emoji:'🎵',
+    id:'g7', num:4, name:'노래 맞히기', sub:'인트로 퀴즈', emoji:'🎵',
     color:'#EF476F', colorLight:'#FFE8EF',
     desc:'노래 일부를 듣고 제목/가수 맞히기',
     body:{
@@ -1735,20 +1695,7 @@ const GAMES = [
     }
   },
   {
-    id:'g8', num:8, name:'단체 퀴즈', sub:'O/X 또는 객관식', emoji:'🧠',
-    color:'#06A77D', colorLight:'#E0F4ED',
-    desc:'팀별로 협의해 답을 정하는 단체 퀴즈',
-    body:{
-      rules:[
-        '진행자가 문제를 출제, 팀별로 <b>의논 후 한 답</b>을 제출.',
-        '정답: 모두 정답 처리 / 가장 많이 맞힌 팀 우선.',
-        '문제는 하키 / 일반 상식 / WEST 멤버 관련 등.',
-      ],
-      tip:'정답을 동시에 들도록 진행하면 부정 방지 가능.',
-    }
-  },
-  {
-    id:'g9', num:9, name:'몸으로 말해요', sub:'제스처 게임', emoji:'🤸',
+    id:'g9', num:5, name:'몸으로 말해요', sub:'제스처 게임', emoji:'🤸',
     color:'#007BFF', colorLight:'#E3F2FF',
     desc:'몸짓만으로 제시어를 설명',
     isWordGame:true, wordMode:'gesture',
@@ -1763,16 +1710,16 @@ const GAMES = [
     }
   },
   {
-    id:'g10', num:10, name:'이어말하기', sub:'연상 단어 체인', emoji:'🔗',
+    id:'g10', num:6, name:'이어말하기', sub:'연상 단어 체인', emoji:'🔗',
     color:'#8B5A3C', colorLight:'#F0E8E0',
     desc:'앞 단어에서 연상되는 단어 잇기',
     body:{
       rules:[
-        '진행자가 첫 단어를 제시 (예: "<b>아이스하키 하면?</b>").',
+        '진행자가 첫 단어를 제시 (예: "<b>축구장에 가면?</b>").',
         '팀원들이 한 명씩 돌아가며 <b>연상 단어</b>를 빠르게 외칩니다.',
         '머뭇거리거나 같은 단어 반복 시 탈락. 가장 오래 버틴 팀이 승리.',
       ],
-      examples:['아이스하키 → 스틱 → 퍽 → 골 → 싸움 → ...'],
+      examples:['축구공도 있고 → 축구공도 있고, 골대도 있고 → ...'],
       tip:'진행자가 시작 단어를 매번 다르게 정해 라운드 진행.',
     }
   },
@@ -1781,7 +1728,7 @@ const GAMES = [
 /* 제시어 카테고리 */
 const GESTURE_CATEGORIES = [
   {id:'sports', name:'스포츠', emoji:'🏐', stars:1,
-   words:['등산','마라톤','필드하키','테니스','발레','수영','탁구','배드민턴','야구','사격','양궁','클라이밍','배구','골프','당구']},
+   words:['등산','마라톤','아이스하키','테니스','발레','수영','탁구','배드민턴','야구','사격','양궁','클라이밍','배구','골프','당구']},
   {id:'food', name:'음식', emoji:'🍱', stars:2,
    words:['짜장면','김밥','샌드위치','치킨','족발','마라탕','생맥주','아이스크림','햄버거','팝콘','바나나','샤인머스캣','치즈스틱','솜사탕','군고구마']},
   {id:'animal', name:'동물', emoji:'🦒', stars:3,
@@ -1789,13 +1736,13 @@ const GESTURE_CATEGORIES = [
   {id:'job', name:'직업', emoji:'👨‍🏫', stars:4,
    words:['선생님','치과의사','어부','아이돌','경찰','피겨선수','판사','유튜버','택시기사','마술사','헤어디자이너','스튜어디스','화가','간호사','셰프']},
   {id:'object', name:'사물', emoji:'🧴', stars:4,
-   words:['우산','치약','하키퍽','소화기','립스틱','도마','지갑','향수','마스크','무선이어폰','발톱깎이','면봉','라이터','손난로','충전기']},
+   words:['우산','치약','골대','소화기','립스틱','도마','지갑','향수','마스크','무선이어폰','발톱깎이','면봉','라이터','손난로','충전기']},
   {id:'emotion', name:'감정', emoji:'😆', stars:5,
    words:['기쁨','초조함','졸림','외로움','설렘','부끄러움','놀람','반가움','궁금함','역겨움','분노','어이없음','신기함','감동','실망']},
 ];
 const SPEED_CATEGORIES = [
   {id:'person', name:'인물/연예인', emoji:'🌟', stars:2,
-   words:['강호동','소녀시대 태연','차준환','송강호','성시경','손흥민','페이커','신사임당','이효리','안정환','(짱구) 철수','강동원','광개토대왕','로켓단','(웨스트)유광현']},
+   words:['강호동','소녀시대 태연','차준환','송강호','성시경','손흥민','페이커','신사임당','이효리','안정환','고윤정','강동원','광개토대왕','장원영','메시']},
   {id:'eat', name:'먹는 것', emoji:'🍰', stars:2,
    words:['당근 케이크','아이스 카페라떼','민트초코','팥죽','사과주스','치즈버거','연어초밥','파인애플피자','레몬사탕','포카리스웨트','부대찌개','인절미','잔치국수','푸팟퐁커리','탕짜면']},
   {id:'brand', name:'브랜드', emoji:'🛍', stars:3,
@@ -1850,7 +1797,16 @@ function bindFirebase(){
     }
 
     if(val.results && typeof val.results === 'object'){
-      store.results = val.results;
+      // 삭제된 게임의 잔여 데이터 자동 정리
+      const validIds = new Set(GAMES.map(g => g.id));
+      const cleaned = {};
+      let hasOrphan = false;
+      Object.entries(val.results).forEach(([gid, rec])=>{
+        if(validIds.has(gid)) cleaned[gid] = rec;
+        else hasOrphan = true;
+      });
+      store.results = cleaned;
+      if(hasOrphan) writeResults(cleaned);
       needRender = true;
     } else if(!firebaseReady){
       writeResults(store.results);
@@ -2138,7 +2094,7 @@ function renderSlide(){
   }
   if(game.body.examples){
     html += `<div class="slide-section"><h3>${
-      game.id==='g6'||game.id==='g10' ? '예시' : '주제 / 카테고리'
+      game.id==='g10' ? '예시' : '주제 / 카테고리'
     }</h3>
       <div class="topic-list">${
         game.body.examples.map(e => `<span class="topic-chip">${escapeHtml(e)}</span>`).join('')
